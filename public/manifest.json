@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Blur Extension",
+    "description": "Blurs videos on YouTube feed based on selected keywords.",
+    "version": "1.0",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.webp",
+      "default_popup_width": 300,
+      "default_popup_height": 500
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
